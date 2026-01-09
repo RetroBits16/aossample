@@ -1,8 +1,8 @@
-# 🛒 Sistema de Gestión de Supermercado
+#  Sistema de Gestión de Supermercado
 
 Sistema completo de gestión de productos para supermercado con backend FastAPI y frontend HTML/CSS/JS.
 
-## 📋 Características
+##  Características
 
 - ✅ Gestión completa de productos (Crear, Leer, Actualizar, Eliminar)
 - ✅ Base de datos SQLite con 20 productos de ejemplo
@@ -12,7 +12,7 @@ Sistema completo de gestión de productos para supermercado con backend FastAPI 
 - ✅ Sistema de notificaciones
 - ✅ Indicador de stock bajo
 
-## 📁 Estructura del Proyecto
+##  Estructura del Proyecto
 
 ```
 supermercado_app/
@@ -39,7 +39,7 @@ supermercado_app/
 └── README.md                        # Este archivo
 ```
 
-## 🚀 Instalación y Ejecución
+##  Instalación y Ejecución
 
 ### Paso 1: Instalar dependencias
 
@@ -71,7 +71,7 @@ python -m http.server 8080
 
 Luego abre: `http://localhost:8080`
 
-## 📊 Productos de Ejemplo
+##  Productos de Ejemplo
 
 La base de datos incluye 20 productos de supermercado:
 
@@ -82,7 +82,7 @@ La base de datos incluye 20 productos de supermercado:
 - Frutas y Verduras (Tomates, Plátanos)
 - Y más...
 
-## 🔌 API Endpoints
+##  API Endpoints
 
 ### Productos
 
@@ -98,7 +98,7 @@ La base de datos incluye 20 productos de supermercado:
 - `GET /concat?param1=X&param2=Y` - Concatenar dos strings
 - `GET /length?string=X` - Calcular longitud de string
 
-## 📖 Uso de la Aplicación
+##  Uso de la Aplicación
 
 ### Agregar Producto
 
@@ -128,7 +128,7 @@ Ve a la pestaña "Operaciones" para probar las funciones de ejemplo:
 - Concatenar textos
 - Calcular longitud de texto
 
-## 🛠️ Tecnologías
+##  Tecnologías
 
 **Backend:**
 - FastAPI
@@ -144,14 +144,14 @@ Ve a la pestaña "Operaciones" para probar las funciones de ejemplo:
 
 ## 🎨 Características de la Interfaz
 
-- ✨ Diseño moderno con gradientes morados
-- 📱 Totalmente responsivo
-- 🔔 Sistema de notificaciones en tiempo real
-- 🎯 Indicadores visuales de stock bajo
-- 🏷️ Categorías con colores
-- ⚡ Animaciones suaves
+-  Diseño moderno con gradientes morados
+-  Totalmente responsivo
+-  Sistema de notificaciones en tiempo real
+-  Indicadores visuales de stock bajo
+-  Categorías con colores
+-  Animaciones suaves
 
-## 🔧 Configuración
+##  Configuración
 
 Para cambiar el puerto del backend, edita `main.py`:
 
@@ -165,13 +165,13 @@ Para cambiar la URL del backend en el frontend, edita `frontend/script.js`:
 const API_BASE_URL = 'http://127.0.0.1:8000';  // Cambia aquí
 ```
 
-## 📝 Notas
+##  Notas
 
 - La base de datos SQLite se crea automáticamente al iniciar el servidor por primera vez
 - Los productos de ejemplo solo se insertan si la base de datos está vacía
 - CORS está habilitado para permitir peticiones desde cualquier origen (para desarrollo)
 
-## 🐛 Solución de Problemas
+##  Solución de Problemas
 
 **Error de conexión en el frontend:**
 - Asegúrate de que el backend está ejecutándose
@@ -187,16 +187,16 @@ pip install -r requirements.txt
 - Verifica que tengas permisos de escritura en la carpeta
 - Ejecuta el servidor al menos una vez para inicializar la BD
 
-## 👨‍💻 Desarrollo
+##  Desarrollo
 
 Para añadir más productos de ejemplo, edita el archivo `app/database/db.py` en la función `init_db()`.
 
 Para añadir nuevas rutas de API, crea nuevos routers en `app/routes/`.
 
-## 📄 Licencia
+##  Licencia
 
 Este proyecto es de código abierto y está disponible para uso educativo y comercial.
 
 ---
 
-Desarrollado para la gestión eficiente de inventario de supermercados 🛒
+Desarrollado para la gestión eficiente de inventario de supermercados 
