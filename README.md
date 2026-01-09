@@ -16,3 +16,7 @@
 
 - Que se puedan insertar datos
 - Visualizacion de datos
+
+# IMPORTANTE
+- DESDE aossample NO app
+- python -m uvicorn app.main:app --reload
