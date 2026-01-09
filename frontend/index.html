@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Productos - Supermercado</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🛒 Sistema de Gestión de Supermercado</h1>
+            <p>Control Total de Inventario</p>
+        </header>
+
+        <nav class="tab-navigation">
+            <button class="tab-btn active" onclick="showTab('products')">Productos</button>
+            <button class="tab-btn" onclick="showTab('operations')">Operaciones</button>
+        </nav>
+
+        <!-- TAB: PRODUCTOS -->
+        <div id="products-tab" class="tab-content active">
+            <div class="section">
+                <h2>➕ Agregar Nuevo Producto</h2>
+                <form id="product-form">
+                    <div class="form-group">
+                        <label for="product-name">Nombre del Producto:</label>
+                        <input type="text" id="product-name" required placeholder="Ej: Leche Entera 1L">
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="product-price">Precio (€):</label>
+                            <input type="number" id="product-price" step="0.01" required placeholder="0.00">
+                        </div>
+                        <div class="form-group">
+                            <label for="product-stock">Stock:</label>
+                            <input type="number" id="product-stock" required placeholder="0">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="product-category">Categoría:</label>
+                        <select id="product-category">
+                            <option value="">Seleccionar categoría</option>
+                            <option value="Lácteos">Lácteos</option>
+                            <option value="Panadería">Panadería</option>
+                            <option value="Bebidas">Bebidas</option>
+                            <option value="Aceites">Aceites</option>
+                            <option value="Cereales">Cereales</option>
+                            <option value="Conservas">Conservas</option>
+                            <option value="Pasta">Pasta</option>
+                            <option value="Huevos">Huevos</option>
+                            <option value="Snacks">Snacks</option>
+                            <option value="Chocolates">Chocolates</option>
+                            <option value="Embutidos">Embutidos</option>
+                            <option value="Frutas y Verduras">Frutas y Verduras</option>
+                            <option value="Cafés">Cafés</option>
+                            <option value="Galletas">Galletas</option>
+                            <option value="Otros">Otros</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="product-description">Descripción:</label>
+                        <textarea id="product-description" rows="3" placeholder="Descripción del producto (opcional)"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Agregar Producto</button>
+                </form>
+            </div>
+
+            <div class="section">
+                <div class="section-header">
+                    <h2>📦 Lista de Productos</h2>
+                    <button onclick="loadProducts()" class="btn btn-secondary">🔄 Actualizar</button>
+                </div>
+                <div id="products-list" class="products-grid">
+                    <p class="empty-message">Cargando productos...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: OPERACIONES -->
+        <div id="operations-tab" class="tab-content">
+            <div class="operations-container">
+                <!-- Operación: Sumar -->
+                <div class="section">
+                    <h2>🧮 Procesar Valores</h2>
+                    <p class="description">Suma dos valores numéricos</p>
+                    <form id="process-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="value1">Valor 1:</label>
+                                <input type="number" id="value1" required placeholder="0">
+                            </div>
+                            <div class="form-group">
+                                <label for="value2">Valor 2:</label>
+                                <input type="number" id="value2" required placeholder="0">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Procesar</button>
+                        <div id="process-result" class="result-box"></div>
+                    </form>
+                </div>
+
+                <!-- Operación: Concatenar -->
+                <div class="section">
+                    <h2>🔗 Concatenar Textos</h2>
+                    <p class="description">Une dos cadenas de texto</p>
+                    <form id="concat-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="param1">Texto 1:</label>
+                                <input type="text" id="param1" required placeholder="Hola">
+                            </div>
+                            <div class="form-group">
+                                <label for="param2">Texto 2:</label>
+                                <input type="text" id="param2" required placeholder="Mundo">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Concatenar</button>
+                        <div id="concat-result" class="result-box"></div>
+                    </form>
+                </div>
+
+                <!-- Operación: Longitud -->
+                <div class="section">
+                    <h2>📏 Longitud de Texto</h2>
+                    <p class="description">Calcula la longitud de una cadena</p>
+                    <form id="length-form">
+                        <div class="form-group">
+                            <label for="string-input">Texto:</label>
+                            <input type="text" id="string-input" required placeholder="Escribe algo...">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Calcular Longitud</button>
+                        <div id="length-result" class="result-box"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Notifications -->
+        <div id="notification" class="notification"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
